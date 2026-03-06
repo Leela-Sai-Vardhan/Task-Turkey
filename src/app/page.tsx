@@ -45,7 +45,7 @@ export default function LandingPage() {
         {/* Navbar */}
         <nav className="sticky top-0 z-50 flex h-[72px] items-center justify-between border-b border-white/[0.06] bg-[#0a0a1a]/70 px-6 backdrop-blur-sm sm:px-16 lg:px-20">
           <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-cyan-500 text-base">⚡</div>
+            <img src="/logo.png" alt="Task Turkey Logo" className="h-8 w-8 object-contain" />
             <span className="text-lg font-extrabold">Task Turkey</span>
           </div>
           <div className="hidden items-center gap-9 md:flex">
