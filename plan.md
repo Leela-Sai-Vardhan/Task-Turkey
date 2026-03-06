@@ -1,4 +1,4 @@
-# TaskForge — Project Plan
+# Task Turkey — Project Plan
 
 > A crowdsourced micro-task platform where users contribute their free-tier AI tool usage to collectively produce monetizable content.
 
@@ -23,9 +23,9 @@
 
 ## 1. Concept Overview
 
-### What Is TaskForge?
+### What Is Task Turkey?
 
-TaskForge is a platform that coordinates large groups of students and people with laptops to collectively produce monetizable content — primarily AI-generated videos — using their individual free-tier access to AI tools.
+Task Turkey is a platform that coordinates large groups of students and people with laptops to collectively produce monetizable content — primarily AI-generated videos — using their individual free-tier access to AI tools.
 
 ### The Problem
 
@@ -68,7 +68,7 @@ USER COPIES PROMPT → Goes to AI tool (Kling, Runway, etc.) → Generates clip
 USER UPLOADS CLIP TO THEIR GOOGLE DRIVE (free, 15GB per account)
     │
     ▼
-USER PASTES GOOGLE DRIVE LINK on TaskForge
+USER PASTES GOOGLE DRIVE LINK on Task Turkey
     │
     ▼
 PLATFORM VERIFIES LINK (accessible, correct format, valid video)
@@ -91,7 +91,7 @@ TOKENS BECOME REDEEMABLE (once revenue milestones are hit)
 
 ### Why Google Drive Links (Not File Uploads)?
 
-Users store videos on their own Google Drive (15GB free per Google account). TaskForge's database stores only a URL string. This eliminates the biggest cost bottleneck — video storage.
+Users store videos on their own Google Drive (15GB free per Google account). Task Turkey's database stores only a URL string. This eliminates the biggest cost bottleneck — video storage.
 
 **10,000 video submissions = a few KB of text in Postgres. Zero storage cost.**
 
@@ -461,7 +461,7 @@ CREATE POLICY "Users see own notifications" ON notifications
 ## 6. Folder Structure
 
 ```
-taskforge/
+Task Turkey/
 ├── src/
 │   ├── app/
 │   │   ├── (marketing)/
@@ -1024,7 +1024,7 @@ UPSTASH_REDIS_REST_TOKEN=
 
 ```bash
 # 1. Create Next.js project
-npx create-next-app@latest taskforge --typescript --tailwind --eslint --app --src-dir
+npx create-next-app@latest Task Turkey --typescript --tailwind --eslint --app --src-dir
 
 # 2. Install core dependencies
 npm install @supabase/supabase-js @supabase/ssr drizzle-orm postgres
