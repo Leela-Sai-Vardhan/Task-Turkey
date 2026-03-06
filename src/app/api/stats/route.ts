@@ -3,7 +3,8 @@ import { db } from "@/lib/db";
 import { tasks, profiles, tokenTransactions } from "@/lib/db/schema";
 import { eq, sql, gt } from "drizzle-orm";
 
-export const revalidate = 3600; // revalidate once per hour
+// Never statically prerender — this route queries the DB at runtime
+export const dynamic = "force-dynamic";
 
 export async function GET() {
     const [taskRow] = await db
