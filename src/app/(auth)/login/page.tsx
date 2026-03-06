@@ -3,14 +3,15 @@
 import { createClient } from "@/lib/supabase/client";
 import { motion } from "framer-motion";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
-export default function LoginPage() {
+// Inner component that uses useSearchParams — must be inside <Suspense>
+function LoginContent() {
     const searchParams = useSearchParams();
     const returnTo = searchParams.get("returnTo") ?? "/dashboard";
 
     const handleGoogleSignIn = async () => {
         const supabase = createClient();
-        // D1: Pass returnTo so the callback can redirect back to the intended page
         const callbackUrl = new URL(`${window.location.origin}/auth/callback`);
         callbackUrl.searchParams.set("next", returnTo);
         await supabase.auth.signInWithOAuth({
@@ -70,5 +71,14 @@ export default function LoginPage() {
                 </p>
             </motion.div>
         </div>
+    );
+}
+
+// Outer page wraps LoginContent in Suspense (required by Next.js for useSearchParams)
+export default function LoginPage() {
+    return (
+        <Suspense>
+            <LoginContent />
+        </Suspense>
     );
 }
