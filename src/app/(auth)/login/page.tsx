@@ -36,7 +36,7 @@ function LoginContent() {
             >
                 {/* Logo */}
                 <div className="mb-6 flex flex-col items-center gap-3">
-                    <img src="/logo.png" alt="Task Turkey" className="h-16 w-16 object-contain" />
+                    <img src="/logo_final.png" alt="Task Turkey" className="h-16 w-16 object-contain" />
                     <div>
                         <h1 className="text-2xl font-extrabold">Task Turkey</h1>
                         <p className="mt-1 text-[13px] text-white/50">

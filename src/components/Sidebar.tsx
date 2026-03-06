@@ -51,7 +51,7 @@ export default function Sidebar() {
                 {/* Logo */}
                 <div className="flex h-[72px] items-center border-b border-white/[0.06] px-7">
                     <div className="flex items-center gap-2.5">
-                        <img src="/logo.png" alt="Task Turkey Logo" className="h-8 w-8 object-contain" />
+                        <img src="/logo_final.png" alt="Task Turkey Logo" className="h-8 w-8 object-contain" />
                         <span className="text-[17px] font-extrabold text-white">Task Turkey</span>
                     </div>
                 </div>
